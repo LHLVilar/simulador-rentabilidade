@@ -1,12 +1,23 @@
+// server.js
+
 const express = require('express');
-const path = require('path');
 const bodyParser = require('body-parser');
+const cors = require('cors');
+
+const simulatorRoutes = require('./routes/simulatorRoutes');
 const apiRoutes = require('./routes/api');
 
 const app = express();
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/api', apiRoutes);
-
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// Middlewares
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Rotas
+app.use('/api/simulate', simulatorRoutes); // rota do simulador
+app.use('/api', apiRoutes);                // rota de leads
+
+// Rota teste
+app.get('/', (req, res) =>
