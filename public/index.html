@@ -3,37 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Simulador de Rentabilidade</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    label { display: block; margin-top: 10px; }
+    input, select { width: 300px; padding: 5px; margin-top: 5px; }
+    button { margin-top: 20px; padding: 10px 20px; }
+    #resultado { margin-top: 30px; }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Simulador de Rentabilidade Vitacon</h1>
 
-    <div class="form">
-      <label>Quanto deseja investir?</label>
-      <input type="number" id="investment" placeholder="R$ 300000">
+  <h1>Simulador de Rentabilidade</h1>
 
-      <label>Região</label>
-      <select id="region">
-        <option value="Pinheiros">Pinheiros</option>
-        <option value="Itaim">Itaim</option>
-      </select>
-
-      <label>Tipo de imóvel</label>
-      <select id="type">
-        <option value="Studio">Studio</option>
-        <option value="1Quarto">1 Quarto</option>
-      </select>
-
-      <button id="simulateBtn">Calcular Rentabilidade</button>
-    </div>
-
-    <div id="result"></div>
-
-    <button id="leadBtn">Quero receber oportunidades reais</button>
-  </div>
-
-  <script src="js/app.js"></script>
-</body>
-</html>
-
+  <form id="simuladorForm">
+    <label>Nome:
+      <input type="text" name="nome" required>
+    </label>
