@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const { simulate } = require('../utils/simulator');
-const { saveLead } = require('../utils/googleSheets'); // função para integrar Sheets
 
+// Rota de simulação
 router.post('/simulate', (req, res) => {
   try {
     const result = simulate(req.body);
@@ -12,10 +12,12 @@ router.post('/simulate', (req, res) => {
   }
 });
 
+// Rota de captura de lead (ainda sem integração com Google Sheets)
 router.post('/lead', async (req, res) => {
   try {
-    await saveLead(req.body); // envia para Google Sheets
-    res.json({ success: true });
+    // Aqui só faz log por enquanto
+    console.log("Lead capturado:", req.body);
+    res.json({ success: true, message: "Lead recebido (Google Sheets ainda não integrado)" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
