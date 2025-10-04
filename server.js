@@ -20,4 +20,11 @@ app.use('/api/simulate', simulatorRoutes); // rota do simulador
 app.use('/api', apiRoutes);                // rota de leads
 
 // Rota teste
-app.get('/', (req, res) =>
+app.get('/', (req, res) => {
+  res.send('Simulador de Rentabilidade ativo');
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
