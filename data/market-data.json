@@ -1,30 +1,41 @@
 {
-  "Pinheiros": {
-    "Studio": {
-      "price": 300000,
-      "dailyRate": 220,
-      "occupancy": 0.78,
-      "condo": 500,
-      "maintenance": 50,
-      "adminRate": 0.1
+  "bairros": {
+    "Pinheiros": {
+      "liquidez": "Alta",
+      "taxaOcupacao": 0.75,
+      "valorDiaria": 220,
+      "condominio": 700,
+      "administracao": 0.15,
+      "vacancia": "Baixa"
     },
-    "1Quarto": {
-      "price": 500000,
-      "dailyRate": 350,
-      "occupancy": 0.75,
-      "condo": 800,
-      "maintenance": 70,
-      "adminRate": 0.1
+    "Vila Olímpia": {
+      "liquidez": "Alta",
+      "taxaOcupacao": 0.70,
+      "valorDiaria": 210,
+      "condominio": 650,
+      "administracao": 0.15,
+      "vacancia": "Baixa"
+    },
+    "Itaim": {
+      "liquidez": "Alta",
+      "taxaOcupacao": 0.72,
+      "valorDiaria": 230,
+      "condominio": 750,
+      "administracao": 0.15,
+      "vacancia": "Baixa"
+    },
+    "Moema": {
+      "liquidez": "Normal",
+      "taxaOcupacao": 0.68,
+      "valorDiaria": 200,
+      "condominio": 600,
+      "administracao": 0.15,
+      "vacancia": "Satisfatória"
     }
   },
-  "Itaim": {
-    "Studio": {
-      "price": 320000,
-      "dailyRate": 230,
-      "occupancy": 0.8,
-      "condo": 550,
-      "maintenance": 60,
-      "adminRate": 0.1
-    }
+  "tiposOperacao": {
+    "Valorizacao": {},
+    "Renda Passiva Short Stay": {},
+    "Renda Passiva Long Stay": {}
   }
 }
